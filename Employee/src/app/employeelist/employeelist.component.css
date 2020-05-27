@@ -1,0 +1,49 @@
+h1 {
+    color:blue;
+}
+
+input.ng-invalid {
+    border-left: 5px solid red;
+}
+
+
+input.ng-valid {
+    border-left: 5px solid green;
+}
+
+.error {
+   color: red 
+}
+
+table {
+    width: 80%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+ 
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }

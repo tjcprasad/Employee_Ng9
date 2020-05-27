@@ -7,8 +7,13 @@ export class EmployeeService {
   url="http://localhost:3000/employees";
   constructor(private http:HttpClient) { }
 
-  getEmployeeData() {
+  getEmployeesData() {
     return this.http.get(this.url);
+    //console.warn(data)
+  }
+
+  getEmployeeData(id) {
+    return this.http.get(`${this.url}/${id}`);
     //console.warn(data)
   }
 
@@ -16,11 +21,12 @@ export class EmployeeService {
     return this.http.post(this.url, data);
   }
 
-  updateEmployeeData(data) {
-    return this.http.put(this.url, data);
+  updateEmployeeData(id, data) {
+    return this.http.put(`${this.url}/${id}`, data);
   }
 
-  deleteEmployeeData(data) {
-    return this.http.delete(this.url, data.id);
+  deleteEmployeeData(id) {
+    //return this.http.delete('${this.url}/${id}');
+    return this.http.delete(`${this.url}/${id}`);
   }
 }

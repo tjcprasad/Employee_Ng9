@@ -1,0 +1,18 @@
+<div style="text-align: center;margin-top:50px;">
+<h2>Update Employee Form:</h2>
+<form #employeePost="ngForm" (ngSubmit)="updateEmployee(employeePost.value)">    
+    <input required type="text" #userId="ngModel" name="userId" [(ngModel)]="employee.userId" placeholder="User Id"/><br>
+    <span *ngIf="userId.invalid && userId.touched" class="error">User Id required</span><br>
+    <input type="text" required #firstName="ngModel" name="firstName"  [(ngModel)]="employee.firstName"  placeholder="First Name"/><br>
+    <span *ngIf="firstName.invalid && firstName.touched" class="error">First Name required</span><br>
+    <input type="text" required #lastName="ngModel" name="lastName"  [(ngModel)]="employee.lastName"  placeholder="Last Name"/><br>
+    <span *ngIf="lastName.invalid && lastName.touched" class="error">Last Name required</span><br>
+    <input type="text" name="jobTitleName"  [(ngModel)]="employee.jobTitleName"  placeholder="Job Title"/><br><br>
+    <input type="text" name="region" [(ngModel)]="employee.region" placeholder="Region"/><br><br>
+    <input type="text" required #phoneNumber="ngModel" name="phoneNumber"  [(ngModel)]="employee.phoneNumber"  placeholder="Phone Number"/><br>
+    <span *ngIf="phoneNumber.invalid && phoneNumber.touched" class="error">Phone Number required</span><br>
+    <input type="text" required #emailAddress="ngModel"  name="emailAddress"  [(ngModel)]="employee.email"  placeholder="Email"/><br>
+    <span *ngIf="emailAddress.invalid && emailAddress.touched" class="error">Email Address required</span><br>
+    <button type="submit">Submit</button>
+</form>
+</div>
